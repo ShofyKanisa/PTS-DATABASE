@@ -1,0 +1,70 @@
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K001','Allerin 120 cc','Obat Terbatas','Botol','50','20000','22000');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K002','Becombion 110 ml','Obat Bebas','Botol','10','15000','16000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K003','Becombion 60 ml','Obat Bebas','Botol','5','8000','9000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K004','Betadine Vag Plus','Obat Bebas','Botol','12','12000','13000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K005','Komix','Obat Bebas','Lembar','50','4500','5000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K006','Diazepam','Obat Keras','tablet','4','55000','60000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K007','CTM','Obat Bebas','tablet','3','70000','75000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K008','Amoxicillin','Obat Terbatas','tablet','74','975','1100');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K009','Antimo','Obat Bebas','tablet','2','5100','6000');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into TB_OBAT
+    -> (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES
+    -> ('K010','Parasetamol','Obat Bebas','Strips','100','3000','4000');
+Query OK, 1 row affected (0.00 sec)
+
+
+1. SELECT * FROM TB_OBAT WHERE satuan = 'Botol';
+
+2. SELECT * FROM TB_OBAT WHERE jenis = 'Obat Keras' OR jenis = 'Obat Terbatas';
+
+3. SELECT * FROM TB_OBAT WHERE stok < 50;
+
+4. SELECT * FROM TB_OBAT WHERE satuan != 'tablet';
+
+5. SELECT * FROM TB_OBAT WHERE jenis = 'Obat Bebas' ORDER BY harga_jual ASC;
+
+6. SELECT * FROM TB_OBAT WHERE harga_beli BETWEEN 10000 AND 100000 AND satuan = 'Botol';
+
+7. SELECT * FROM TB_OBAT WHERE jenis = 'Obat Bebas' AND stok >= '5';
+
+8. SELECT * FROM TB_OBAT WHERE nama_obat LIKE 'B%';
+
+9. SELECT * FROM TB_OBAT WHERE nama_obat LIKE '%om%';
+
+12. SELECT * FROM TB_OBAT WHERE kode_obat = 'K001' OR kode_obat = 'K003' OR kode_obat = 'K005' OR kode_obat = 'K007';
