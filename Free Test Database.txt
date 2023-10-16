@@ -1,0 +1,70 @@
+1. Tampilkan nama, pekerjaan dari hubungan 2 tabel (jobs, employee)
+
+SELECT employee.full_name, jobs.name_job
+FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job;
+
+2.
+
+SELECT employee.*, jobs.*
+FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE employee.id_job is NULL;
+
+3.
+
+SELECT employee.*, jobs.*
+FROM employee
+RIGHT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE employee.id_emplo is NULL;
+
+4.
+
+SELECT employee.*, jobs.*
+FROM employee
+JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE gender = "M";
+
+5.
+
+SELECT employee.*, jobs.*
+FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE place_birth = "Bandung\r\n" OR place_birth = "Jakarta\r\n";
+
+6.
+
+SELECT employee.*, jobs.*
+FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+ORDER BY date_birth DESC;
+
+7. Tampilkan pegawai yang lahir tahun 2000
+
+SELECT employee., jobs.
+FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE date_birth LIKE "2000-%";
+
+8. Hitung jumlah pegawai berdasarkan jabatan
+
+SELECT jobs.name_job,
+COUNT(*) FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+GROUP BY name_job;
+
+9. Munculkan yang lahir dari Jan 1999 - Des 2001
+
+SELECT employee., jobs.
+FROM employee
+LEFT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE date_birth LIKE "1999-%" OR date_birth LIKE "2000-%" OR date_birth LIKE "2001-%";
